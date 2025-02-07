@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Clock with Background Image & Random Colors</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img id="backgroundImage">
+
+    <div class="clock">
+        <div class="flip-container"><div class="flip" id="hour1">0</div></div>
+        <div class="flip-container"><div class="flip" id="hour2">0</div></div>
+        <div class="colon">:</div>
+        <div class="flip-container"><div class="flip" id="minute1">0</div></div>
+        <div class="flip-container"><div class="flip" id="minute2">0</div></div>
+        <div class="colon">:</div>
+        <div class="flip-container"><div class="flip" id="second1">0</div></div>
+        <div class="flip-container"><div class="flip" id="second2">0</div></div>
+    </div>
+
+    <div class="controls" id="controls">
+        <button class="btn hide-in-fullscreen" id="fullScreenBtn" onclick="toggleFullScreen()">Full Screen</button>
+        <label for="imageUpload" class="upload-btn hide-in-fullscreen" id="uploadBtn">Choose Image</label>
+        <input type="file" id="imageUpload" accept="image/*" onchange="setBackgroundImage()">
+        <button id="resetImageBtn" class="reset-btn hide-in-fullscreen" onclick="resetBackgroundImage()">Reset Image</button>
+        <div class="toggle-container hide-in-fullscreen">
+            Random Background: 
+            <div class="toggle-switch" id="toggleSwitch" onclick="toggleRandomColors()"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
